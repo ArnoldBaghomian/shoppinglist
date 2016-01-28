@@ -18,7 +18,6 @@ function makeEntry() {
         description: description
     };
 
-
     $.post('/operations', itemInfo)
         .success(function (data) {
             //alert('saved');

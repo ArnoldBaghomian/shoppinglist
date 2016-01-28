@@ -36,5 +36,4 @@ router.get('/changeEntry:itemId', function (req, res, next) {
     });
 });
 
-
 module.exports = router;

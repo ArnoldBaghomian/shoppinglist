@@ -4,7 +4,6 @@ var sumCost = 0;
 var rowArray = [];
 var itemArray = [];
 
-
 function init() {
     console.log('!!!inside init of main.js');
     $('.items-list').on('click', '.detail-col', showDetail);
@@ -12,7 +11,6 @@ function init() {
     $('.items-list').on('click', '.delete-col', deleteEntry);
     showList();
 }
-
 
 
 function changeEntry() {
@@ -28,8 +26,6 @@ function deleteEntry() {
 
     var id = itemArray[index]._id;
 
-
-
     $.ajax({
             method: "DELETE",
             url: "/operations/" + id
@@ -39,7 +35,6 @@ function deleteEntry() {
             showList();
         });
 
-
 }
 
 function findSum() {
@@ -48,14 +43,11 @@ function findSum() {
     });
 }
 
-
 function showDetail() {
     var index = $(this).closest('.row-container').index()-1;
     var id = itemArray[index]._id;
     location.href = '/itemDetails' + id;
 }
-
-
 
 function makeTable() {
     $('.items-list').empty();  // empty the html table
@@ -103,7 +95,6 @@ function showList() {
         showTable();
     });
 }
-
 
 function showTable() {
     $('.items-list').append(rowArray);

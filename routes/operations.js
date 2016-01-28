@@ -13,7 +13,6 @@ router.delete('/:itemId', function (req, res, next) {
     });
 });
 
-
 router.post('/', function (req, res, next) {
     var item = new Item(req.body);
 
@@ -51,6 +50,5 @@ router.put('/:itemId', function (req, res, next) {
     });
 
 });
-
 
 module.exports = router;
