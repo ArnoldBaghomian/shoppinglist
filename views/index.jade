@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1(align='center') Shopping List&nbsp;&nbsp;
+    a.btn.btn-success.btn-circle(href='/makeEntry') Add
+  table.table-striped
+    thead
+    tbody.items-list
+    script(src='javascripts/main.js')
+  div.bottom
+    span.Header Total: $
+    span.text.bottomLine
